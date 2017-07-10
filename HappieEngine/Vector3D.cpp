@@ -38,3 +38,37 @@ Vector3D& Vector3D::operator=(const Vector3D& rhs){
 
 	return *this;
 }
+
+Vector3D operator+(const Vector3D& lhs, const Vector3D& rhs) {
+	Vector3D sum = Vector3D();
+
+	sum.x = lhs.x + rhs.x;
+	sum.y = lhs.y + rhs.y;
+	sum.z = lhs.z + rhs.z;
+
+	return sum;
+}
+
+Vector3D operator-(const Vector3D& lhs, const Vector3D& rhs) {
+	Vector3D diff = Vector3D();
+
+	diff.x = lhs.x - rhs.x;
+	diff.y = lhs.y - rhs.y;
+	diff.z = lhs.z - rhs.z;
+
+	return diff;
+}
+
+Vector3D operator*(const Vector3D& lhs, const float& rhs) {
+	Vector3D mul = Vector3D();
+
+	mul.x = lhs.x * rhs;
+	mul.y = lhs.y * rhs;
+	mul.z = lhs.z * rhs;
+
+	return mul;	
+}
+
+Vector3D operator*(const float& lhs, const Vector3D& rhs) {
+	return rhs * lhs;
+}
