@@ -13,6 +13,11 @@ public:
 	Vector3D(const Vector3D& v);
 	Vector3D& operator= (const Vector3D& rhs);
 
+	friend Vector3D operator+(const Vector3D& lhs, const Vector3D& rhs);
+	friend Vector3D operator-(const Vector3D& lhs, const Vector3D& rhs);
+	friend Vector3D operator*(const Vector3D& lhs, const float& rhs);
+	friend Vector3D operator*(const float& lhs, const Vector3D& rhs);
+		
 private:
 
 };
